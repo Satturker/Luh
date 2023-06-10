@@ -1,6 +1,8 @@
 package br.com.git.screenmatch.modelo;
 
-public class Filme extends Titulo{
+import br.com.git.screenmatch.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
     public String getDiretor() {
         return diretor;
@@ -8,4 +10,9 @@ public class Filme extends Titulo{
     public void setDiretor(String diretor) {
         this.diretor = diretor;
     }
+    @Override
+    public int getClassificacao(){
+        return (int)pegaMedia() / 2;
+    }
+
 }

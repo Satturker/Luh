@@ -1,4 +1,6 @@
 import br.com.git.screenmatch.calculos.CaculadoraDeTempo;
+import br.com.git.screenmatch.calculos.FiltroRecomendacao;
+import br.com.git.screenmatch.modelo.Episodio;
 import br.com.git.screenmatch.modelo.Filme;
 import br.com.git.screenmatch.modelo.Serie;
 import java.io.File;
@@ -26,5 +28,12 @@ public class Main {
         calculadora.inclui(meuFilme);
         calculadora.inclui(filmemeu);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
     }
 }
