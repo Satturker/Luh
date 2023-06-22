@@ -4,6 +4,7 @@ import br.com.git.screenmatch.modelo.Episodio;
 import br.com.git.screenmatch.modelo.Filme;
 import br.com.git.screenmatch.modelo.Serie;
 import java.io.File;
+import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +27,9 @@ public class Main {
 
         Filme filmenovo = new Filme();
         filmemeu.setNome("inters");
+        filmemeu.setDuracaoEmMinutos(645);
+        System.out.println(filmenovo);
+
         System.out.println(meuFilme.pegaMedia());
         calculadora.inclui(meuFilme);
         calculadora.inclui(filmemeu);
