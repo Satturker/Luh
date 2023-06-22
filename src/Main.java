@@ -24,6 +24,8 @@ public class Main {
         filmemeu.setAnoDeLancamento(2023);
         filmemeu.setDuracaoEmMinutos(123456);
 
+        Filme filmenovo = new Filme();
+        filmemeu.setNome("inters");
         System.out.println(meuFilme.pegaMedia());
         calculadora.inclui(meuFilme);
         calculadora.inclui(filmemeu);
